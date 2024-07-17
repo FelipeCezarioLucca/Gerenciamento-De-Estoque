@@ -1,3 +1,4 @@
+#Esta parte do código define os produtos em estoque, a quantidade, os valores, as categorias e o código de cada produto a ser chamado no sistema na hora de dar entrada ou saídas.
 estoque = [
     {"produto": "IPHONE 15 PRO MAX", "quantidade": 100, "preco_unitario": 5899.90, "categoria": "Eletrônicos", "sku": "SKU123"},
     {"produto": "AIRFRYER", "quantidade": 50, "preco_unitario": 198.80, "categoria": "Eletrodomésticos", "sku": "SKU456"},
@@ -5,6 +6,9 @@ estoque = [
     {"produto": "NOTEBOOK DELL INSPIRON", "quantidade": 30, "preco_unitario": 3499.99, "categoria": "Eletrônicos", "sku": "SKU101"},
     {"produto": "PANELA ELÉTRICA ELECTROLUX", "quantidade": 40, "preco_unitario": 249.90, "categoria": "Eletrodomésticos", "sku": "SKU202"}
 ]
+
+
+#Esta parte imprime os detalhes de cada um dos produtos no estoque, sendo eles o produto, a quantidade, o preço unitário, a categoria e o item, depois a função de print vai exibir cada uma das informações.
 def imprimir_estoque(estoque):
     print("Estoque:")
     for item in estoque:
@@ -14,8 +18,17 @@ def imprimir_estoque(estoque):
         categoria = item["categoria"]
         sku = item["sku"]
         print(f"Produto: {produto}, Quantidade: {quantidade}, Preço Unitário: R$ {preco_unitario:.2f}, Categoria: {categoria}, SKU: {sku}")
+
+
+#Esta função vai imprimir o estoque INICIAL.
 imprimir_estoque(estoque)
+
+
+#Esta parte do código é usada para armazenar os produtos e suas quantidades disponíveis pois ela em si está vazia.
 estoque = {}
+
+
+#Esta parte (CÓDIGO WHILE) serve como um loop para o menu de controle de estoque, e em seguida o menu é configurado e já pode entrar em execução.
 while True:
     print("\n*** Controle de Estoque ***")
     print("1. Registrar entrada de produto")
